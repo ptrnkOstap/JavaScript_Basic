@@ -1,4 +1,6 @@
+//hw1
 // цельсии в фаренгейты
+'use strict';
 {
     let tC = parseInt(prompt('Введите значение температуры в цельсиях :'));
     if (typeof tC == "number" & isNaN(tC) == false & tC != 0) {
