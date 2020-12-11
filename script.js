@@ -51,7 +51,7 @@
 }
 //Task 3
 {
-    let a = -1;
+    let a = 1;
     let b = 2;
 
     function processNum(a, b) {
@@ -60,20 +60,11 @@
             alert('wrong input');
             return null;
         }
-        const c = (a >= 0 && b >= 0) ? 'allP' : (a < 0 && b < 0) ? 'allN' : 'def';
-        switch (c) {
-            case 'allP':
-                alert(`a - b = ${a - b}`);
-                break;
-            case 'allN':
-                alert(`a * b = ${a * b}`);
-                break;
-            default:
-                alert(`a + b = ${a + b}`);
-        }
+        if (a >= 0 & b >= 0) {alert(`a - b = ${a - b}`)}
+        if (a < 0 & b < 0) {alert(`a * b = ${a * b}`)}
+        else{alert(`a + b = ${a + b}`)}
     }
-
-    // processNum(a, b);
+    processNum(a, b);
 }
 //Task 4
 {
