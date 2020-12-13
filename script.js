@@ -79,7 +79,6 @@
         default:
             alert(`Последовательность от ${a} до ${multiplicator} :\n` + getSequence(a, multiplicator));
     }
-
     function getSequence(n, c) {
         let result = '';
         for (let start = n; start <= c; start++) {
