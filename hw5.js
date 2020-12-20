@@ -1,3 +1,7 @@
+'use strict';
+
+//HW5
+//Task 1,2
 const chessBoard = {
     rows: 10,
     columns: 10,
@@ -103,5 +107,8 @@ const chessBoard = {
         }
     }
 }
-chessBoard.renderChessBoard();
+//chessBoard.renderChessBoard();
+//Task3
+{
 
+}
