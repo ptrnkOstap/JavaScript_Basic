@@ -3,7 +3,7 @@ const chessBoard = {
     columns: 10,
     cellColor1: '#d18b46',
     cellColor2: '#ffcda0',
-    cellHeight: 'auto',
+    cellHeight: '60px',
     rowTitles: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'].reverse(),
     colTitles: ['1', '2', '3', '4', '5', '6', '7', '8'],
     setFigures(row, col, cell) {
