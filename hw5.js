@@ -87,13 +87,13 @@ const chessBoard = {
                 cell.style.cssText = `width:${this.cellHeight}; height:${this.cellHeight}`;
 
                 if ((col > 1 && row > 1) && (col < 10 && row < 10)) {
-                    this.setFigures(row, col, cell);
-                    if ((row + col) % 2 !== 0) {
-                        cell.style.backgroundColor = this.cellColor1;
+                    if ([3, 4, 8, 9].includes(row)) this.setFigures(row, col, cell);  //[3,4,8,9] - номера строк с фигурами
+                    if ((row * 8 + col) % 2 !== 0) {
+                        cell.style.backgroundColor = this.cellColor1; //нечетную ячейку красим в один цвет
                     } else {
-                        cell.style.backgroundColor = this.cellColor2;
+                        cell.style.backgroundColor = this.cellColor2; // четную в другой
                     }
-                } else {
+                } else { //верхний if разукрашивал поле доски,а этот else - устанавливает заголовки
                     cell.style.cssText += "font-weight:bold; font-size:2rem; text-align:center;";
                     if ((row === 1 || row === 10) && (col > 1 && col < 10)) cell.innerHTML = this.rowTitles[col - 2];
                     if ((col === 1 || col === 10) && (row > 1 && row < 10)) cell.innerHTML = this.colTitles[row - 2];
