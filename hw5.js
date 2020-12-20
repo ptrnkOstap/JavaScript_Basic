@@ -87,8 +87,8 @@ const chessBoard = {
                 cell.style.cssText = `width:${this.cellHeight}; height:${this.cellHeight}`;
 
                 if ((col > 1 && row > 1) && (col < 10 && row < 10)) {
-                    if ([3, 4, 8, 9].includes(row)) this.setFigures(row, col, cell);  //[3,4,8,9] - номера строк с фигурами
-                    if ((row * 8 + col) % 2 !== 0) {
+                    if ([2, 3, 8, 9].includes(row)) this.setFigures(row, col, cell);  //[2,3,8,9] - номера строк с фигурами
+                    if ((row * 7 + col) % 2 !== 0) {
                         cell.style.backgroundColor = this.cellColor1; //нечетную ячейку красим в один цвет
                     } else {
                         cell.style.backgroundColor = this.cellColor2; // четную в другой
