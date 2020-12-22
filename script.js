@@ -60,32 +60,38 @@
             alert('wrong input');
             return null;
         }
-        if (a >= 0 & b >= 0) {alert(`a - b = ${a - b}`)}
-        if (a < 0 & b < 0) {alert(`a * b = ${a * b}`)}
-        else{alert(`a + b = ${a + b}`)}
+        if (a >= 0 & b >= 0) {
+            alert(`a - b = ${a - b}`)
+        }
+        if (a < 0 & b < 0) {
+            alert(`a * b = ${a * b}`)
+        } else {
+            alert(`a + b = ${a + b}`)
+        }
     }
-    processNum(a, b);
+
+    //processNum(a, b);
 }
 //Task 4
 {
-    let multiplicator = 15;
-    let a = Math.floor(Math.random() * (multiplicator + 1));
-    switch (a) {
-        case multiplicator:
-            ;
-        case 0:
-            alert('Попробуй еще раз');
-            break;
-        default:
-            alert(`Последовательность от ${a} до ${multiplicator} :\n` + getSequence(a, multiplicator));
-    }
-    function getSequence(n, c) {
-        let result = '';
-        for (let start = n; start <= c; start++) {
-            result += (start + ' ');
-        }
-        return result;
-    }
+    // let multiplicator = 15;
+    // let a = Math.floor(Math.random() * (multiplicator + 1));
+    // switch (a) {
+    //     case multiplicator:
+    //         ;
+    //     case 0:
+    //         alert('Попробуй еще раз');
+    //         break;
+    //     default:
+    //         alert(`Последовательность от ${a} до ${multiplicator} :\n` + getSequence(a, multiplicator));
+    // }
+    // function getSequence(n, c) {
+    //     let result = '';
+    //     for (let start = n; start <= c; start++) {
+    //         result += (start + ' ');
+    //     }
+    //     return result;
+    // }
 }
 //Task 5
 {
@@ -133,7 +139,7 @@
             }
         }
 
-        console.log('Task 6 - (a:3, b:4, division) = ' + mathOperation('3', 4, 'division'));
+        //console.log('Task 6 - (a:3, b:4, division) = ' + mathOperation('3', 4, 'division'));
     }
 }
 //Task 7
@@ -152,6 +158,60 @@
         return result += val * power(val, pow - 1);
     }
 
-    console.log('Task 8 - (2^3)  = ' + power(2, '3'));
+    //console.log('Task 8 - (2^3)  = ' + power(2, '3'));
 }
 
+//HW3
+//Task 1
+{
+    // вывести просыте числа в промежутке от 0 до 100 при помощи цикла while
+
+    function checkNum(n) {                                 //функция для проверки 1 числа
+        let divisionCount = 0;
+        for (let divider = 2; divider <= n; divider++) {
+            if (n % divider === 0) divisionCount++;
+            if (divisionCount > 1) break;
+        }
+        return divisionCount === 1;
+    }
+
+    let n = 2;
+    const sequence = Array(); //массив для простых чисел
+
+    while (n <= 100) {
+        if (checkNum(n)) {sequence.push(n);}
+        n++;
+    }
+    alert(`Массив простых чистел от 0 до 100 [${sequence.toString()}]`);
+}
+//Task 2,3
+{
+    function countBasketPrice(arr) {   //функция подсчета стоимости товаров в корзине. Если корзина пустая вернет null
+        if (arr.length === 0) {
+            return null
+        }
+        let totalSum = 0;
+        for (const line of arr) {
+            totalSum += line[2] * line[3];
+        }
+        return totalSum;
+    }
+
+    const custBasket = Array(); // корзина покупателя
+
+    //добавим пару товаров
+    custBasket.push([333555, 'T-shirt', 1, 10]); // [ариткул, название, количество, цена единицы]
+    custBasket.push([111333, 'Shorts', 2, 15]);
+
+    console.log(countBasketPrice(custBasket));
+}
+//Task 4
+{
+for (let i=0;i<=9;alert(`Вывод чисел от 0 до 9\nтекущее число ${i++}`));
+}
+//Task 5
+{
+    for (let i = 1; i <= 20; i++) {
+        console.log('*'.repeat(i));
+    }
+}
