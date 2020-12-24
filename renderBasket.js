@@ -20,7 +20,7 @@
         },
         removeProduct(prodArticle) {
             if (this.products.length === 0) return null;
-            const prodIndex = this.products.findIndex(p => p.article === prodArticle);
+            const prodIndex = this.products.findIndex(p => p.article === pgitrodArticle);
             if (prodIndex !== -1) {
                 this.products.splice(prodIndex, 1);
             }
