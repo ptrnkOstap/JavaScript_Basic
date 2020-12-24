@@ -107,7 +107,7 @@ const chessBoard = {
         }
     }
 }
-//chessBoard.renderChessBoard();
+chessBoard.renderChessBoard();
 //Task3
 {
     {
