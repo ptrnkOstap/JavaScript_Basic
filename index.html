@@ -4,11 +4,38 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+        .main-header-wrapper, .catalog-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
 
+        .main-header-wrapper {
+            justify-content: flex-end;
+            align-items: center;
+            background-color: lightgrey;
+        }
+
+        .catalog-wrapper {
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: lightblue;
+            height: 80vh;
+        }
     </style>
-    <script src="hw6.js" defer></script>
+    <script defer src="hw6.js"></script>
 </head>
 <body>
-    <div class="cart"></div>
+<header class="main-header">
+    <div class="main-header-wrapper">
+        <p class="cart-contents"></p>
+        <button class="go-to-cart">Go to cart</button>
+    </div>
+</header>
+<main class="catalog">
+    <div class="catalog-wrapper">
+
+    </div>
+</main>
 </body>
 </html>
