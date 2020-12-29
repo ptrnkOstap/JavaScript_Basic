@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .main-header-wrapper, .cart-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .main-header-wrapper {
+            justify-content: space-between;
+            align-items: center;
+            background-color: lightgrey;
+            padding: 0 20px 0 20px;
+            box-sizing: border-box;
+        }
+
+        .cart-wrapper {
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: lightblue;
+            height: 80vh;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .catalog-link {
+            justify-self: flex-start;
+        }
+        .cart-list{
+            margin:0 auto;
+            width: 800px;
+            min-height: 300px;
+            background-color:whitesmoke;
+            display: flex;
+            flex-flow: column;
+        }
+        .cart-message{
+            align-self: center;
+        }
+        .cart-list-item{
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 0.1fr 1fr 1fr 1fr;
+            justify-items: center;
+            align-items: center;
+            border-top:1px solid grey;
+            border-bottom: 1px solid grey;
+            margin:5px 0 5px 0;
+        }
+
+    </style>
+    <script defer src="hw6.js"></script>
+</head>
+<body>
+<header class="main-header">
+    <div class="main-header-wrapper">
+        <div>
+            <a class="catalog-link" href="index.html"><p>Back to catalog</p></a>
+        </div>
+    </div>
+</header>
+<main class="cart">
+    <div class="cart-wrapper">
+        <div class="cart-list">
+<!--            <div class="cart-list-item">-->
+<!--                <p class="cart-list-item-name">T-shirt</p>-->
+<!--                <p class="cart-list-item-quantity">2</p>-->
+<!--                <p class="cart-list-item-price">10 $</p>-->
+<!--                <p class="cart-list-item-subtotal">20 $</p>-->
+<!--            </div>-->
+        </div>
+    </div>
+</main>
+</body>
+</html>
